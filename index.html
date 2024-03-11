@@ -1,0 +1,219 @@
+<html>
+<head>
+	<title> Age Calculator </title>
+	<style>
+		/* CSS styles */
+		*
+		{
+			padding : 0;
+			margin : 0;
+			box-sizing : border-box;
+			
+			font- family : "Poppins",sans-serif;
+		}
+		/* Body styles */
+		body
+		{
+			background-color : white; 
+			color : white;
+			text-align : center;
+			font-size : 20px;
+			
+		}
+		
+		.contain * 
+		{
+			border : none;
+			outline : none;
+		}
+		.inputdata
+		{
+			background-color : #ffffff ;
+			padding : 40px;	
+			height : 30%;
+			width : 30%;
+			border-radius : 30px; 
+			box-shadow: 0 0.93em 1.25 rgba(0,0,0,0.3);
+			margin-bottom : 40px;
+			display : grid;
+			gap : 1em;
+			position : absolute ;
+			transform : translate(-50%,-50%);
+			top : 40%;
+			left : 50%;
+			aspect-ratio:1/1;
+			object-fit:cover;
+			transition: scale 350ms ease,opacity 350ms linear;
+		}
+		.inputdata:not(:hover)
+		{
+			scale : 0.8;
+			capacity : 0.5;
+		}
+		.inputdata:hover
+		{
+			box-shadow: 0px 0px 5px #03e9f4,0px 0px 15px #03e9f4,0px 0px 20px #03e9f4,0px 0px 100px #03e9f4;
+			cursor : pointer;
+		
+		}
+		input,button
+		{
+			font-weight : 500;
+			border-radius : 10px;
+		}
+		input
+		{
+			background-color : #eeeeff;
+			color : #080808;
+			padding : 20px;
+			font-size : 25;
+		}
+		button 
+		{
+			color : #ffffff;
+			background-color :  #7d56f3;
+		}
+		.outputdata
+		{
+			width :100%;
+			display : flex;
+			justify-content : space-between ;
+		}
+		.daysdemo
+		{
+			height : 15%; 
+			width : 10%;
+			background-color : #ffffff;
+			border : 1px solid ;
+			border-radius : 10px; 
+			color : #080808;
+			display : grid ;
+			place-items : center ;
+			position : absolute ;
+			transform : translate(300%,300%);
+			top : 30%;
+			left : 30%;
+		}
+		.monthdemo
+		{
+			height : 15%; 
+			width : 10%;
+			background-color : #ffffff;
+			border : 1px solid ;
+			border-radius : 10px; 
+			color : #080808;
+			display : grid ;
+			place-items : center ;
+			position : absolute ;
+			transform : translate(300%,300%);
+			top : 30%;
+			left : 15%;
+		}
+
+		.yeardemo
+		{
+			height : 15%; 
+			width : 10%;
+			background-color : #ffffff;
+			border : 1px solid ;
+			border-radius : 10px; 
+			color : #080808;
+			display : grid ;
+			place-items : center ;
+			position : absolute ;
+			transform : translate(300%,300%);
+			top : 30%;
+			
+		}
+
+		span
+		{
+			font-size : 1.87em;
+			font-weight : 500;
+		}
+		p
+		{
+			font-size : 25; 
+			color : #707070;
+			font-weight : 400;
+		}
+
+		#btncalculateAge
+		{
+			height : 40px;	
+		}
+		.content
+		{
+			position : relative;
+		}
+		.content h2
+		{
+			position : absolute;
+			color : #fff;
+			transform : translate(85%,50%);
+			font-size : 90;
+		}
+		.content h2:nth-child(1)
+		{
+			color : transparent;
+			-webkit-text-stroke :2px #03e9f4;
+		}
+		.content h2:nth-child(2)
+		{
+			color : #03e9f4;
+			animation : animate 4s ease-in-out infinite;
+		}
+		@keyframes animate
+		{
+			0%,100%
+			{
+				clip-path: polygon(0% 45%,15% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%);
+			}
+			50%
+			{
+				
+				clip-path: polygon(45% 0%,44% 15%,50% 32%,60% 54%,61% 70%,58% 84%,100% 52%,100% 60%,0% 100%);
+			}
+		}
+		#ageimage 
+		{
+			top : 70%;
+			left : 80%;
+			position : absolute;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<h2>Age Calculator</h2>
+		<h2>Age Calculator</h2>
+		
+	</div>
+
+	<div class="container">
+		<div class="inputdata">
+			<input type="date" id="date-input" />
+			<button  id="btncalculateAge">Calculate</button>
+		</div>
+		<div class="outputdata">
+			<div class="yeardemo">
+				<span id="year"></span>
+				<p>Year</p>
+			</div>
+			<div class="monthdemo">
+				<span id="month"></span>
+				<p>month</p>
+			</div>
+			<div class="daysdemo">
+				<span id="days"></span>
+				<p>Day</p>
+			</div>
+			<img id="ageimage" src="ageimage.jpg" height="25%" width="20%"></img>
+			<img id="agesymbol" src="symbolage.jpg" height="10%" width="10%"></img>
+		</div>
+	
+
+	<script src="script.js"></script>
+</body>
